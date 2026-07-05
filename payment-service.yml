@@ -25,8 +25,7 @@ spring:
 
       properties:
         spring.json.trusted.packages: "*"
-        spring.json.value.default.type: com.rishit.payment_service.PAYMENT_SERVICE.event.OrderCreateEvent
-
+        spring.json.value.default.type: com.rishit.common.event.OrderCreateEvent
     producer:
       key-serializer: org.apache.kafka.common.serialization.StringSerializer
       value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
