@@ -12,26 +12,28 @@ spring:
 
     gateway:
 
-      mvc:
+      server:
 
-        routes:
+        webmvc:
 
-          - id: order-service
-            uri: lb://order-service
-            predicates:
-              - Path=/orders/**
+          routes:
 
-
-          - id: user-service
-            uri: lb://user-service
-            predicates:
-              - Path=/users/**
+            - id: order-service
+              uri: lb://order-service
+              predicates:
+                - Path=/orders/**
 
 
-          - id: inventory-service
-            uri: lb://inventory-service
-            predicates:
-              - Path=/inventory/**
+            - id: user-service
+              uri: lb://user-service
+              predicates:
+                - Path=/users/**
+
+
+            - id: inventory-service
+              uri: lb://inventory-service
+              predicates:
+                - Path=/inventory/**
 
 
 eureka:
